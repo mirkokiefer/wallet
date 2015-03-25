@@ -1,0 +1,9 @@
+sudo: false
+language: objective-c
+xcode_workspace: wallet.xcworkspace
+xcode_scheme: wallet
+before_install:
+  - gem install cocoapods -v '0.36.0'
+script:
+  - xctool test -workspace wallet.xcworkspace -scheme wallet -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
+
